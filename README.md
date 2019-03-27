@@ -6,3 +6,5 @@
 
 ## Trabalho 04 - Tamagotchi/Pet (Java):
    Esse pra mim foi o melhor de fazer,também tive ajuda da monitoria,procurei por a vídeo aula só que tinha dado um problema e nao deu pra assistir,porém eu consegui fazer,com dificuldade ainda na sintaxe também. Aprendi sobre os métodos modificadores (gets e sets),mas ainda me confundo,algumas vezes, nada que praticar mais nao resolva.Passei alguns dias pra terminar,pois tive um pouquinho de dificuldade na lógica de um comando(que quando terminei, vi que era simples),mas de resto foi muito bom fazer, esse foi o que mais goste! Ah! mudei o programa de intellij idea para eclipse, pois quando tentei executar o pet no intellij tava dando um problema, nao sei o que, e quando mudei executou de boa!
+
+## Trabalho 05 - Topique (Java):
