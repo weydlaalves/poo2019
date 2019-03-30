@@ -20,9 +20,13 @@ public class Control {
 		}else if(ui[0].equals("show")) {
 			System.out.println(topik);
 		}else if (ui[0].equals("embarcar")) {
-			topik.embarcar(new Passageiro (ui[1], Integer.parseInt(ui[2])));
+			topik.embarcar(new Passageiro(ui[1],Integer.parseInt(ui[2])));
 		}else if(ui[0].equals("remover")) {
+			topik.remover(ui[1]);
 			
+			
+		}else {
+			System.out.println("comando inválido");
 		}
 				
 	}

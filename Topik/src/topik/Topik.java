@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 class Topik {
 	 ArrayList<Passageiro> assentos ; 
-	 	int qtd_prioridade;
-	 	public Topik(int capacidade, int qtd_prioridade) {
+	 int qtd_prioridade;
+	 
+	 public Topik(int capacidade, int qtd_prioridade) {
 		assentos = new ArrayList<Passageiro>();
 		for(int i = 0; i < capacidade; i++) {
 				assentos.add(null);
 		}
 		this.qtd_prioridade = qtd_prioridade;
-
 	}
 	@Override
 	public String toString() {
 		String saida = "[";
-		for(int i = 0; i< assentos.size() ; i++) {
+		for(int i = 0; i< this.assentos.size() ; i++) {
 			if(i < this.qtd_prioridade) {	
 				saida += (" @");
 			}else {
@@ -27,45 +27,44 @@ class Topik {
 		}
 		return saida + " ]";
 	}
+	
+	public boolean embarcar(int inicio,int fim, Passageiro pass) {
+		for(int i = inicio ; i< fim ; i++) {
+			if (this.assentos.get(i) == null) {
+				this.assentos.set(i,pass);
+				return true;
+				
+			}
+		}return false;
+	}
+	
 	public void embarcar (Passageiro p) {
 		if(p.preferencial()){
-			for(int i = 0; i < qtd_prioridade; i++ ) {
-				if(assentos.get(i) == null) {
-					assentos.set(i,p);
-			 		return;
-				}
-			}
-			for(int i = qtd_prioridade; i< assentos.size(); i++) {
-				if(assentos.get(i) == null) {
-					assentos.set(i,p);
-					return;	
-				}
-			}
-			
+			embarcar(0,this.assentos.size(),p);
+					
 		}else {
-			for (int i = qtd_prioridade; i< assentos.size(); i++) {
-				if(assentos.get(i) == null){
-					assentos.set(i, p);
-					return;
-				}
+			if(!embarcar(this.qtd_prioridade,this.assentos.size(),p)){
+				embarcar(0,this.assentos.size(),p);
+				
+							
 			}
 		}
-		
-	}
-		void remover(String id) {
-			for(int i =0; i < assentos.size(); i++) {
-				Passageiro p = this.assentos.get(i);
-				if((p!= null) && (p.id.equals(id))) {
-				this.assentos.set(i,null);
-				return;
+	}	
+	public boolean remover(String id) {
+		for(int i =0; i < this.assentos.size(); i++) {
+			if(this.assentos.get(i) != null) {	
+				if(this.assentos.get(i).id.equals(id)) {
+					this.assentos.set(i,null);
+					return true;
+				}
 			}
 				
-			System.out.println(" passageiro nao esta na topik ");		
-		}
+		}return false;	
 	}
- class Passageiro {
-	public String id ;
-	public int idade;
+}
+	class Passageiro {
+	  public String id ;
+	  public int idade;
 	 
 	public Passageiro (String id,int idade) {
 		this.id = id;
@@ -81,7 +80,6 @@ class Topik {
 	}
  }
  
-}
 	  
 
  
