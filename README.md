@@ -9,3 +9,4 @@
 
 ## Trabalho 05 - Topique (Java):
    Esse trabalho teve um nivel de dificuldade bem mais elevado, pois tive que entender direito os conceitos se arraylist, pedi uns slids do professor Anderson que o professor Tercio tinha disponibilizado para uns alunos dele, dei uma estudada nos tipos de arraylist e como pode ser usado,também vi umas video aulas do curso em vídeo e fui tentando fqazer só, sempre buscando ajuda com a sitaxe, apesar de já ter memorizado muita coisas, ainda me atrapalho, dei uma enganchada na tostring da topique, porém pedido ajuda no whats, deu certo, depois assisti a video aula do professor e fui tentando entender e fazer so os outros metos(incerir,remover), deu tudo certo, descobri que gosto mais de java do que de Phyton e mais de POO do que de FUP rsrs.
+## Trabalho 06 - Agiota (Java):
