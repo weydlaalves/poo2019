@@ -14,5 +14,4 @@ public class Cliente {
 
 		return this.id + ":"+ this.fullname +":" + this.saldo;
 	}
-	
 }

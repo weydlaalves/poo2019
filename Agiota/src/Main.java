@@ -9,6 +9,8 @@ public class Main {
 		
 		String line = sc.nextLine();
 		String []ui = line.split(" ");
+			
+		try {
 		if (ui[0].equals("end")) {
 			break;
 		}
@@ -26,11 +28,19 @@ public class Main {
 		}else if(ui[0].equals("emprestar")) {
 				sist.emprestar(ui[1], Float.parseFloat(ui[2]));
 		}else if(ui[0].equals("historico")) {
-				sist.historico();
-		}else if (ui[0].equals("transacoes")) {
-				sist.mostrarCliente(ui[1]);
+				for(Transacoes t : sist.historico()) {
+					System.out.println(t);
+				}
+		}else if (ui[0].equals("matar")) {
+				sist.matar(ui[1]);
 		}
+		}catch(NullPointerException e) {
+			System.out.println("fail: usuario nao cadastrado");		
+		}catch(RuntimeException e) {
+			System.out.println("fail: Tente novamente");
+			
 		}
 	}
-
+	
+	}
 }
