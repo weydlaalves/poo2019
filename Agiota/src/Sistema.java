@@ -1,30 +1,32 @@
-import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Sistema {
-	ArrayList<Cliente> clientes;
-	ArrayList<Transacoes> tr;
+	HashMap<String,Cliente > clientes;
+	HashMap<String,Transacoes>tr;
 	float saldo;
 	int count;
 	
 	public Sistema(float saldo) {
 		this.saldo = saldo;
-		this.clientes = new ArrayList<Cliente>();
-		this.tr = new ArrayList<Transacoes>();
+		new HashMap<String, Cliente>();
+		new HashMap <String, Transacoes>();
 		this.count = 0;	
 	}
 	public String toString() {
 		String saida = " ";
-		for (Cliente cliente : clientes) {
-			saida += cliente +"\n";
+		for (String key : clientes.keySet()) {
+			saida += clientes.get(key) +"\n";
 		}	
 			return saida+"Saldo: "+ this.saldo + "\n";
 	}
 	public void cadastrar(Cliente cli) {
+		Cliente cl = clientes.get(cli);
 		if(this.encontrarClientes(cli.id) != null) {
 			System.out.println("Id ja cadastrado");
 			return;
 		}
-		clientes.add(cli);
+		clientes.put(cli());
 	}
 	
 	public Cliente encontrarClientes(String id){
