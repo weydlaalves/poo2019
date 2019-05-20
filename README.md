@@ -13,7 +13,12 @@
  Esse trabalho foi bem mais difícil, passei bastante tempo para terminar, fiz a maior parte só, porem com quando enganchava,pedia intruções no whats ou a alhuem que ja tinha conhecimento da linguagem, começei a colocar try e cacth, para tentar controlar os erros, fiz só na main, o unico metodo que fiz sem pedir ajuda foi o matar(kkk),mas espero ja estou me  habituando, então vou começar logo (se Deus quiser) à não precisar de tanta ajuda, tenho dificuldade também em organizar o codigo, apago as chaves e depois me perco pra saber aonde está dando erro, creio eu que isso vá melhorar, também me atrapalhei com o filter, mas entendi direitinho pra que filter, map e join servem, agora é so tentar nos outros exercícios fixar melhor e também trabalhar melhor as exceções. 
  
 ## Trabalho 07 - Agiota (map):
-## Trabalho 08 - Banco ( Herança e Polimorfismo):
+Tentei refazer usando mapas em troca de ArrayList, não consegui pois me confundi muito, principalmente quando era pra instanciar na controller, não sei, não seu certo.Tentarei mais na frente.
+## Trabalho 08 - Empresa ( Herança e Polimorfismo):
   Essa atividade eu refiz alguns metodos feitos em sala, com a ajuda da video aula, para entender melhor a herança, no caso do Funcionário, eu entendi que só preciso fazer classes diferentes quando são executados metodos diferentes( gerente pode demitir, funcionario não)pra isso eu faco uma classe mão que tem todos os atributos e métos padrão, e as outras vão herdar os da classe modelo, mas vão acrescentar as suas partucularidades, e pra isso eu defino o extends, e o super pra chamar a camada mais externa. Acrescentei o métodor demitir funcionário no gerente.
 
 ## Trabalho 06 - Salário (Herança e Polimorfismo):
+Fiz com ajuda do video, porem ficou faltando setBonuns, ainda irei acreacentar.
+
+## Trabalho 07-Banco( Trabalho feito para revisão de conteúdo):
+Fiz so, mas também olhei alguns videos e algumas questões ja feitas, porém não consequi, fiz menos da metade do codigo,fiz as classes, um banco, cliente com uma conta e uma conta poupança e outra corrente que extendem dela, fui fazer o método para add os clientes no banco, porem nao consegui como pedia a questão, creio que se tivesse coseguido essa parte direito, fazer as outras seria mais de boas(Eu acho), mas eu me confundi muito com a questão dos mapas, fiz com mapa e arrayList, refiz a questão umas tres vezes, porém não sai do canto(triste).
