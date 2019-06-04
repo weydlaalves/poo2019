@@ -14,14 +14,10 @@ import java.util.Scanner;
 					break;
 				}
 				else if(ui[0].equals("addCli")) {
-					Cliente cli = new Cliente(ui[1]);
-					Conta cc = new ContaCorrente(0,0.00,0);
-					Conta cp = new ContaPoupanca(0,0.00,0);
-					b.addcli(cli,cc,cp);
-					
+					b.addcli(ui[1]);
 				}
 				else if(ui[0].equals("show")) {
-					System.out.println(b.toString());
+					System.out.println(b);
 				}
 
 			}
