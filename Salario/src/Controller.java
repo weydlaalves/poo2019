@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -24,18 +23,20 @@ public class Controller {
 				mapaf.put(ui[1],ft);
 			}else if(ui[0].equals("addDiaria")) {
 				Funcionario fp = mapaf.get(ui[1]);
-				fp.add_diaria();
+				fp.add_diarias();
 			}else if (ui[0].equals("addBonus")) {
 				Funcionario fp = mapaf.get(Double.parseDouble(ui[1]));
 				fp.setBonus();
 			}
 			else if(ui[0].equals("show")) {
 				Funcionario fp = mapaf.get(ui[1]);
-				if(fp != null)
+				if(fp != null) {
 					System.out.println(fp);
-				else
+				}
+				else {
 					System.out.println("fail: funcionario nao existe");
-			}else  if(ui[0].equals("remover")){
+				}
+				}else  if(ui[0].equals("remover")){
 				Funcionario fp = mapaf.remove(ui[1]);
 			}else {
 				System.out.println("comando invalido");

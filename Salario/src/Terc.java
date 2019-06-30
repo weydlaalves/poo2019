@@ -21,10 +21,7 @@ class Terc extends Funcionario {
 		return salario ; 
 	}
 	@Override
-	double add_diaria() {
-		System.out.println("Nao possui diarias");
-		return calc_salario();
-	}
+	
 	public double setBonus() {
 		 return calc_salario()+super.setBonus();
 	}

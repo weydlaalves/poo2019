@@ -1,5 +1,3 @@
-package pooWeydla;
-
 public class Diretor extends Gerente {
 	double gratificacao;
 	

@@ -1,5 +1,3 @@
-package pooWeydla;
-
 public class Gerente extends Funcionario {
 	String pass; 
 	public Gerente(String nome, double salario,String pass) {

@@ -1,5 +1,3 @@
-package pooWeydla;
-
 import java.util.Scanner;
 
 public class Controller {

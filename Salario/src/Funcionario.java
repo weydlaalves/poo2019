@@ -6,7 +6,8 @@ abstract class Funcionario {
 	 protected double bonus;
 	
 	 abstract double calc_salario();
-	 abstract double add_diaria();
+	
+	 
 	 public Funcionario(String nome,int max_diarias) {
 		 
 		 this.nome = nome;
@@ -17,12 +18,15 @@ abstract class Funcionario {
 	 public String toString() {
 		 return  nome;
 	 }
-	
-	 
 	 public double setBonus() {
 		 return this.bonus/3;
-		 
 	 }
-	 
+	 public void add_diarias() {
+		 if(qtd_diarias <= 2) {
+			 qtd_diarias += 1;
+			 max_diarias += 100;
 			 
+		 }
+	 }
+	
 }

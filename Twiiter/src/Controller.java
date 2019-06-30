@@ -1,9 +1,42 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Controller {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+        Scanner sc = new Scanner(System.in);
+        Sistema sist = new Sistema();
+     
+        while(true){
+            String line = sc.nextLine();
+            String ui[] = line.split(" ");
+        try {
+        	if (ui[0].equals("end"))
+        		break;
+        	else if (ui[0].equals("addUser")) {
+        		sist.addUsuario(ui[1]);
+            } else if (ui[0].equals("show")) {
+                System.out.println(sist);
+            } else if (ui[0].equals("seguir")) {
+            	Usuario um = sist.getUsuario(ui[1]);
+                Usuario dois = sist.getUsuario(ui[2]);
+                um.seguir(dois);
+            } else if(ui[0].equals("twitar")) {
+                String id = ui[1];
+         		String mensagem = " ";
+         		for(int i=2 ; i<ui.length; i++) {
+         			mensagem += ui[i] + " ";
+         		}	mensagem = mensagem.substring(0,mensagem.length()-1);
+         			
+         		Usuario user = sist.getUsuario(id);
+         		Mensagem msg = new Mensagem (mensagem);
+                user.twitar(msg);
+            } else if(ui[0].equals("timeline")) {
+            	Usuario user = sist.getUsuario(ui[1]);
+            	user.getTimeline();
+            }
+         	}catch(RuntimeException rt){
+         		System.out.println(rt.getMessage());
+         	}
+        }
+    }
 }

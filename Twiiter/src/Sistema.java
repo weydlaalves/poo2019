@@ -2,7 +2,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Sistema {
-	String id;
+
 	Map<String,Usuario> usuarios;
 	
 	public Sistema () {
@@ -17,11 +17,15 @@ public class Sistema {
 	public Usuario getUsuario(String id) {
 		Usuario user = usuarios.get(id);
 		if(user == null)
-			throw new RuntimeException("Usuario nao encontrado");
+			throw new RuntimeException("Usuario : " + id + " nao encontrado");
 		return user;
 	}
 	@Override
 	public String toString() {
-		return "Sistema [id=" + id + ", Usuario=" + usuarios + "]";
+		String saida = "";
+		for(Usuario user : usuarios.values())
+			saida += user + "\n";
+		return saida;
+		
 	}
 }
