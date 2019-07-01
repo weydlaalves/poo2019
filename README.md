@@ -17,8 +17,16 @@ Tentei refazer usando mapas em troca de ArrayList, não consegui pois me confund
 ## Trabalho 08 - Empresa ( Herança e Polimorfismo):
   Essa atividade eu refiz alguns metodos feitos em sala, com a ajuda da video aula, para entender melhor a herança, no caso do Funcionário, eu entendi que só preciso fazer classes diferentes quando são executados metodos diferentes( gerente pode demitir, funcionario não)pra isso eu faco uma classe mão que tem todos os atributos e métos padrão, e as outras vão herdar os da classe modelo, mas vão acrescentar as suas partucularidades, e pra isso eu defino o extends, e o super pra chamar a camada mais externa. Acrescentei o métodor demitir funcionário no gerente.
 
-## Trabalho 06 - Salário (Herança e Polimorfismo):
+## Trabalho 09 - Salário (Herança e Polimorfismo):
 Fiz com ajuda do video, porem ficou faltando setBonuns, ainda irei acreacentar.
 
-## Trabalho 07-Banco( Trabalho feito para revisão de conteúdo):
-Fiz so, mas também olhei alguns videos e algumas questões ja feitas, porém não consequi, fiz menos da metade do codigo,fiz as classes, um banco, cliente com uma conta e uma conta poupança e outra corrente que extendem dela, fui fazer o método para add os clientes no banco, porem nao consegui como pedia a questão, creio que se tivesse coseguido essa parte direito, fazer as outras seria mais de boas(Eu acho), mas eu me confundi muito com a questão dos mapas, fiz com mapa e arrayList, refiz a questão umas tres vezes, porém não sai do canto(triste).
+## Trabalho 10-Agencia( Trabalho feito para revisão de conteúdo):
+Fiz so, mas também olhei alguns videos e algumas questões já feitas, porém não consequi, fiz menos da metade do codigo,fiz as classes, um banco, cliente com uma conta e uma conta poupança e outra corrente que extendem dela, fui fazer o método para add os clientes no banco, porem nao consegui como pedia a questão, creio que se tivesse coseguido essa parte direito, fazer as outras seria mais de boas, mas eu me confundi muito com a questão dos mapas, fiz com mapa e arrayList, refiz a questão umas tres vezes, porém não saí do canto(triste).
+
+## Trabalho 11-Twitter
+Demorei muito pra fazer esse e não consegui fazer todos os métodos que a questão pedia, fiz o método twitar, e mostrar timeline.Porém, o mostrar timeline só está mostrando as mensagens do usuário e devia também mostrar as dos seus seguidores.
+
+## Trabalho 12 - Maquina de porcarias
+Esse foi mais tranquilo, ja havia visto coisas parecidas em topik e cinema, além do que o professor fez em sala, eu fiz o método addProdutos, que pede o índice da "molinha", quantos produtos e o preço deles.Depois fiz o método inserir dinheiro na máquina, para depois ir para o comprar(não fiz),troco(não fiz) e outros.
+
+
