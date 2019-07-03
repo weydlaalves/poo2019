@@ -27,37 +27,40 @@ public class Usuario {
     }
 	
 	public void deseguir(Usuario usuario){
-        for(Usuario user : seguidos)
-            if(user.id.equals(usuario.id))
-                return;
         this.seguidos.remove(usuario);
         usuario.seguidores.remove(this);
     }
 	
 	public void twitar(Mensagem msg) {
-		timeline.add(msg);
-		this.nao_lidos+=1;
-		for(Mensagem ms : timeline) {
-			msg.numero+=1;
+			timeline.add(msg);
+		for(Usuario us : seguidores) {
+			meustwits.add(msg);
+			timeline.add(msg);
+			this.nao_lidos += 1;
 			if(msg.nome == null) {
 				msg.nome = id;
+				msg.setNumero(msg.numero);
+			}
+		}
+		
+	}
+	
+	public  ArrayList<Mensagem> getTimeline() {
+		for(Mensagem ms : meustwits)
+			System.out.println(meustwits);
+		for(Usuario us : seguidores)
+			
+			System.out.println(us.timeline);
+		return timeline;
+	}
+
+	public void darLike(int numero) {
+		for(Mensagem ms : timeline) {
+			if(ms != null) {
+				ms.like(id);
 			}
 		}
 	}
-	public void getTimeline() {
-		this.nao_lidos += 0;
-		for(Mensagem ms: timeline) 
-			System.out.println(ms);
-		
-	}
-
-	//public void darLike(Mensagem msg) {
-		//for(Mensagem ms : timeline) {
-			//if(ms.equals(msg)) {
-			//	msg.darlike(id);
-			//}
-	//	}
-	//}
 	
 	public int getNao_lidos() {
 		return nao_lidos;

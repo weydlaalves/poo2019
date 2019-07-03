@@ -20,19 +20,28 @@ public class Controller {
             	Usuario um = sist.getUsuario(ui[1]);
                 Usuario dois = sist.getUsuario(ui[2]);
                 um.seguir(dois);
-            } else if(ui[0].equals("twitar")) {
+            }else if (ui[0].equals("unfollow")) {
+            	Usuario um = sist.getUsuario(ui[1]);
+                Usuario dois = sist.getUsuario(ui[2]);
+                dois.deseguir(um);
+            }
+            else if(ui[0].equals("twitar")) {
                 String id = ui[1];
          		String mensagem = " ";
          		for(int i=2 ; i<ui.length; i++) {
          			mensagem += ui[i] + " ";
-         		}	mensagem = mensagem.substring(0,mensagem.length()-1);
-         			
+         		}   mensagem = mensagem.substring(0,mensagem.length()-1);
+         		
          		Usuario user = sist.getUsuario(id);
-         		Mensagem msg = new Mensagem (mensagem);
-                user.twitar(msg);
+         		Mensagem msg = new Mensagem (0,id,mensagem);
+         		user.twitar(msg);
+                
             } else if(ui[0].equals("timeline")) {
             	Usuario user = sist.getUsuario(ui[1]);
             	user.getTimeline();
+            }else if(ui[0].equals("darlike")) {
+            	Usuario user = sist.getUsuario(ui[1]);
+            	user.darLike(Integer.parseInt(ui[2]));
             }
          	}catch(RuntimeException rt){
          		System.out.println(rt.getMessage());
